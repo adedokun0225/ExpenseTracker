@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/front.css" />
+    <link rel="stylesheet" href="../css/analy.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--Sidebar-->
+      <div id="sidebar-container"></div>
+      <!--Main content-->
+      <div class="main-content analytics-page">
+        <div class="analytics-container">
+          <h1>Analytics Dashboard</h1>
+
+          <!-- Summary Cards-->
+          <div class="analytics-summary">
+            <div class="analytics-card">
+              <h3>Total Spending</h3>
+              <p>€0.00</p>
+            </div>
+
+            <div class="analytics-card">
+              <h3>Top Category</h3>
+              <p>Food</p>
+            </div>
+
+            <div class="analytics-card">
+              <h3>Total Transactions</h3>
+              <p>0</p>
+            </div>
+          </div>
+
+          <!--charts Row-->
+          <div class="chart-row">
+            <div class="chart-card">
+              <h2>Spending by Category</h2>
+              <canvas id="pieChart"></canvas>
+            </div>
+
+            <div class="chart-card">
+              <h2>Category Comparison</h2>
+              <canvas id="barChart"></canvas>
+            </div>
+          </div>
+
+          <!--Monthly Trend-->
+          <div class="chart-card monthly-chart">
+            <h2>Monthly Spending Trend</h2>
+            <canvas id="monthlyChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+  </body>
+</html>

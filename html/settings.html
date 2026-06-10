@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Page description" />
+    <title>Document Title</title>
+    <link rel="stylesheet" href="../css/front.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!--Sidebar-->
+      <div id="sidebar-container"></div>
+
+      <!--Main Content-->
+      <div class="main-content">
+        <div class="settings">
+          <h1>Settings</h1>
+
+          <!--Appearance-->
+
+          <div class="settings-card">
+            <h2>Appearance</h2>
+
+            <div class="setting-item">
+              <label for="theme-toggle">Dark Mode</label>
+
+              <label class="switch">
+                <input type="checkbox" id="theme-toggle" />
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <!--Currency-->
+          <div class="settings-card">
+            <h2>Currency</h2>
+
+            <div class="setting-item">
+              <label for="currency">Select Currency</label>
+
+              <select id="currency">
+                <option value="Euro">€ Euro</option>
+                <option value="Euro">$ US Dollar</option>
+                <option value="Euro">British Pound</option>
+              </select>
+            </div>
+          </div>
+          <!--Save Button-->
+          <button class="save-btn">Save Settings</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/sidebar.js"></script>
+  </body>
+</html>
