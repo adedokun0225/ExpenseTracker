@@ -1,38 +1,39 @@
 // Get form
-const form = document.getElementById("expense-form")
+const form = document.getElementById("expense-form");
 
 // When form submitted do not refresh
-form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    // Get values
-   
-    const amount = document.getElementById("amount").value;
-    const description = document.getElementById("description").value;
-    const category = document.getElementById("category").value;
-    const date = document.getElementById("date").value;
+  // Get values
 
-    //  create
-    const expense = {
-        id: Date.now(),
-        amount: Number(amount),
-        description,
-        category,
-        date
-    };
+  const amount = document.getElementById("amount").value;
+  const description = document.getElementById("description").value;
+  const category = document.getElementById("category").value;
+  const date = document.getElementById("date").value;
 
-    // Get existing expense from local storage
-    let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
+  //  create
+  const expense = {
+    id: Date.now(),
+    amount: Number(amount),
+    description,
+    category,
+    date,
+  };
 
-    // Add new expense
-    expenses.push(expense);
+  // Get existing expense from local storage
+  let expenses = JSON.parse(localStorage.getItem("expenses")) || [];
 
-    // Save back to local storage
-    localStorage.setItem("expenses", JSON.stringify(expenses));
+  // Add new expense
+  expenses.push(expense);
 
-    // Reset form
-    form.reset();
+  // Save back to local storage
+  localStorage.setItem("expenses", JSON.stringify(expenses));
 
-    alert("Expenses added successfully");
+  // Reset form
+  form.reset();
+
+  alert("Expenses added successfully");
+
+  localStorage.setItem("expense", JSON.stringify(expense));
 });
