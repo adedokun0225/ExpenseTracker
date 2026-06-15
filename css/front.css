@@ -61,6 +61,10 @@ body {
   background: #334155;
 }
 
+.sidebar-container {
+  min-width: 250px;
+}
+
 /*Main Content*/
 
 .main-content {

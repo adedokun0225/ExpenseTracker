@@ -6,11 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="../css/front.css" />
     <link rel="stylesheet" href="../css/analy.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="container">
       <!--Sidebar-->
       <div id="sidebar-container"></div>
+
       <!--Main content-->
       <div class="main-content analytics-page">
         <div class="analytics-container">
@@ -20,17 +22,17 @@
           <div class="analytics-summary">
             <div class="analytics-card">
               <h3>Total Spending</h3>
-              <p>€0.00</p>
+              <p id="total-spending">€0.00</p>
             </div>
 
             <div class="analytics-card">
               <h3>Top Category</h3>
-              <p>Food</p>
+              <p id="top-category">-</p>
             </div>
 
             <div class="analytics-card">
               <h3>Total Transactions</h3>
-              <p>0</p>
+              <p id="total-transactions">0</p>
             </div>
           </div>
 
@@ -46,7 +48,6 @@
               <canvas id="barChart"></canvas>
             </div>
           </div>
-
           <!--Monthly Trend-->
           <div class="chart-card monthly-chart">
             <h2>Monthly Spending Trend</h2>
@@ -56,6 +57,7 @@
       </div>
     </div>
 
+    <script src="../js/analytics.js"></script>
     <script src="../js/sidebar.js"></script>
   </body>
 </html>

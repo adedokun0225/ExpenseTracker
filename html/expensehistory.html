@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expense History</title>
-    <link rel="stylesheet" href="../css/front.css"/>
-    <link rel="stylesheet" href="../css/exphist.css"/>
+    <link rel="stylesheet" href="../css/front.css" />
+    <link rel="stylesheet" href="../css/exphist.css" />
   </head>
   <body>
     <div class="container">
@@ -15,90 +15,122 @@
       <!--main content-->
       <div class="main-content">
         <div class="history-container">
-            <h1>Expense History</h1>
+          <h1>Expense History</h1>
 
-            <!--summary-->
-            <div class="summary">
-                <div class="summary-card">
-                <h3>Total Expenses</h3>
-                <p id="total-expenses">2,450.00</p>
-                </div>
-
-                <div class="summary-card">
-                <h3>Records</h3>
-                <p id="total-records">35</p>
-                </div>
+          <!--summary-->
+          <div class="summary">
+            <div class="summary-card">
+              <h3>Total Expenses</h3>
+              <p id="total-expenses">2,450.00</p>
             </div>
 
-            <!--Search & Filter-->
-            <div class="filter-sec">
-                <input
-                type="text"
-                id="search"
-                placeholder="Search description..."
-                >
-                <select name="Search-filter" id="category-filter">
-                    <option value"">All Categories</option>
-                    <option value"food">Food</option>
-                    <option value"transport">Transport</option>
-                    <option value"rent">Rent</option>
-                    <option value"utilities">Utilities</option>
-                    <option value"entertainment">Entertainment</option>
-                    <option value"shopping">Shopping</option>
-                    <option value"others">Others</option>
-                </select>
-
-                <input type="date" id="date-filter">
-                <select id="sort">
-                    <option value="newest">Newest  First</option>
-                    <option value="oldest">Oldest First</option>
-                    <option value="highest">Highest Amount</option>
-                    <option value="lowest">Lowest Amount</option>
-                </select>
+            <div class="summary-card">
+              <h3>Records</h3>
+              <p id="total-records">35</p>
             </div>
+          </div>
 
-            <!--Expense Table-->
-            <table class="expense-table">
-              <thread>
-                <tr>
-                  
-                  <th>Date</th>
-                  <th>Description</th>
-                  <th>category</th>
-                  <th>Amount</th>
-                  <th>Actions</th>
+          <!--Search & Filter-->
+          <div class="filter-sec">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search description..."
+            />
+            <select name="Search-filter" id="category-filter">
+              <option value="">All Categories</option>
+              <option value="food">Food</option>
+              <option value="transport">Transport</option>
+              <option value="rent">Rent</option>
+              <option value="utilities">Utilities</option>
+              <option value="entertainment">Entertainment</option>
+              <option value="shopping">Shopping</option>
+              <option value="others">Others</option>
+            </select>
 
-                </tr>
-              </thread>
+            <input type="date" id="date-filter" />
+            <select id="sort">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="highest">Highest Amount</option>
+              <option value="lowest">Lowest Amount</option>
+            </select>
+          </div>
 
-              <tbody id="expense-list">
-                <tr>
-                  <td>2020-06-25</td>
-                  <td>Groceries</td>
-                  <td>Food</td>
-                  <td>45.20</td>
+          <!--Expense Table-->
+          <table class="expense-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Description</th>
+                <th>category</th>
+                <th>Amount</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
 
+            <tbody id="expense-list">
+              <tr>
+                <td>2020-06-25</td>
+                <td>Groceries</td>
+                <td>Food</td>
+                <td>45.20</td>
 
-                  <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                  </td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
 
-                </tr>
+              <tr>
+                <td>2020-06-25</td>
+                <td>Groceries</td>
+                <td>Food</td>
+                <td>45.20</td>
 
-                <tr>
-                  <td>2020-06-25</td>
-                  <td>Groceries</td>
-                  <td>Food</td>
-                  <td>45.20</td>
+                <td>
+                  <button class="edit-btn">Edit</button>
+                  <button class="delete-btn">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div id="edit-modal" class="modal">
+            <div class="modal-content">
+              <h2>Edit Expense</h2>
+              <input type="hidden" id="edit-id" />
+              <div>
+                <label for="edit-amount">Amount</label>
+                <input type="number" id="edit-amount" />
+              </div>
+              <div>
+                <label for="edit-description">Description</label>
+                <input type="text" id="edit-description" />
+              </div>
 
-                  <td>
-                    <button class="edit-btn">Edit</button>
-                    <button class="delete-btn">Delete</button>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+              <label for="edit-category">Category</label>
+              <select id="edit-category">
+                <option value="food">Food</option>
+                <option value="transport">Transport</option>
+                <option value="rent">Rent</option>
+                <option value="utilities">Utilities</option>
+                <option value="entertainment">Entertainment</option>
+                <option value="shopping">Shopping</option>
+                <option value="others">Others</option>
+              </select>
+
+              <label for="edit-date">Date</label>
+              <input type="date" id="edit-date" />
+
+              <div class="modal-buttons">
+                <button id="save-edit-btn">Save</button>
+              </div>
+
+              <div class="modal-buttons">
+                <button id="close-modal-btn">Cancel</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

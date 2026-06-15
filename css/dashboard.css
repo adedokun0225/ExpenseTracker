@@ -1,0 +1,170 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  min-height: 100vh;
+}
+
+#mainContent {
+  margin-left: 0;
+  padding: 30px;
+  width: 100%;
+}
+
+#mainContent h1 {
+  font-size: 1.5rem;
+  color: #1e2a3a;
+  margin-bottom: 6px;
+}
+
+#mainContent > p {
+  color: #888;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+#budgetSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+#budgetSection label {
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: bold;
+}
+
+#budgetInput {
+  padding: 8px 12px;
+  border: 2px solid #1a73e8;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 160px;
+  outline: none;
+}
+
+#setBudgetBtn {
+  padding: 8px 18px;
+  background-color: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#setBudgetBtn:hover {
+  background-color: #1558b0;
+}
+
+#budgetProgressSection {
+  background: white;
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+#budgetLabel {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+#budgetBar {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  height: 14px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+#budgetBarFill {
+  height: 14px;
+  border-radius: 10px;
+  width: 0%;
+  background-color: #28a745;
+  transition:
+    width 0.5s ease,
+    background-color 0.3s;
+}
+
+#budgetWarningMessage {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #555;
+}
+
+#summaryCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+#summaryCards > div {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+#summaryCards p {
+  font-size: 0.78rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+#summaryCards h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#cardIncome h2 {
+  color: #28a745;
+}
+#cardExpenses h2 {
+  color: #dc3545;
+}
+#cardBalance h2 {
+  color: #1a73e8;
+}
+
+#budgetWarningBanner {
+  background-color: #fff3cd;
+  border: 1px solid #ffc107;
+  border-radius: 10px;
+  padding: 12px 18px;
+  color: #856404;
+  font-size: 0.9rem;
+  margin-bottom: 24px;
+}
+
+#recentTransactions,
+#spendingCategories {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  margin-bottom: 20px;
+}
+
+#recentTransactions h3,
+#spendingCategories h3 {
+  font-size: 1rem;
+  color: #1e2a3a;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
